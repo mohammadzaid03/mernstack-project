@@ -1,0 +1,30 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f2f5;
+}
+.container {
+  width: 400px;
+  margin: auto;
+  margin-top: 100px;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 0 10px gray;
+  border-radius: 8px;
+  text-align: center;
+}
+input, button {
+  padding: 10px;
+  margin: 5px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+table, th, td {
+  border: 1px solid gray;
+  padding: 8px;
+}
+button {
+  cursor: pointer;
+}

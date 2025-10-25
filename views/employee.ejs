@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Employee Dashboard</title>
+  <link rel="stylesheet" href="/style.css" />
+
+</head>
+<body style="text-align:center; margin-top:50px;">
+  <h2>Welcome, <%= name %></h2>
+  <h3>Your Tasks</h3>
+
+  <table border="1" style="margin:auto;">
+    <tr>
+      <th>Task</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+    <% tasks.forEach(t => { %>
+      <tr>
+        <td><%= t.title %></td>
+        <td><%= t.status %></td>
+        <td>
+          <% if (t.status === "Pending") { %>
+            <form action="/complete-task/<%= t._id %>" method="POST" style="display:inline;">
+              <button type="submit">Mark Done</button>
+            </form>
+          <% } %>
+        </td>
+      </tr>
+    <% }) %>
+  </table>
+</body>
+</html>

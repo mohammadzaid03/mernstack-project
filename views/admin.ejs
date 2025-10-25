@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="/style.css" />
+
+</head>
+<body style="text-align:center; margin-top:50px;">
+  <h2>Admin Dashboard</h2>
+  <form action="/add-task" method="POST">
+    <input name="title" placeholder="Task Title" required />
+    <input name="assignedTo" placeholder="Assign To" required />
+    <button type="submit">Add Task</button>
+  </form>
+
+  <h3>All Tasks</h3>
+  <table border="1" style="margin:auto;">
+    <tr>
+      <th>Title</th>
+      <th>Assigned To</th>
+      <th>Status</th>
+    </tr>
+    <% tasks.forEach(t => { %>
+      <tr>
+        <td><%= t.title %></td>
+        <td><%= t.assignedTo %></td>
+        <td><%= t.status %></td>
+      </tr>
+    <% }) %>
+  </table>
+</body>
+</html>
